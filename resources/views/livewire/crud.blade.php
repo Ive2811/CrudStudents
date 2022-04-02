@@ -13,25 +13,31 @@
 <body>
 <div class="alert alert-danger" role="alert">
 <h1>Listado de estudiantes</h1>
+
 </div>
 <table class="table table-success table-striped">
 
     <thread>
         <tr>
             <th>#</th>
+            <th>Codigo</th>
             <th>Nombre</th>
-            <th>Edad</th>
-            <th>Color</th>
-
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Telefoono</th>
+            <th>Correo</th>
 </tr>
     </thread>
     <tbody>
         @foreach ($students as $student)
         <tr>
             <td>{{ $student->id }}</td>
+            <td>{{ $student->code}}</td>
             <td>{{ $student->name }}</td>
-            <td>{{ $student->age }}</td>
-            <td>{{ $student->color }}</td>
+            <td>{{ $student->lastname }}</td>
+            <td>{{ $student->address }}</td>
+            <td>{{ $student->telephone }}</td>
+            <td>{{ $student->email}}</td>
 </tr>
         @endforeach
 </tbody>
