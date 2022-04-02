@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\Crud;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/student', Crud::class)->middleware('auth');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
